@@ -1,0 +1,94 @@
+
+<SignInScreen>:
+    MDBoxLayout:
+        size_hint: 1, 1
+        md_bg_color: rgba("#212332")
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            height: 400
+            width: 400
+            padding: "60dp"
+            pos_hint: {"center_y": 0.5, "center_x": 0.25}
+
+            MDLabel:
+                text: "LOGIN TO YOUR ACCOUNT"
+                font_style: "H5"
+                halign: 'center'
+                bold: True
+                color: rgba("#ffffff")
+
+            Widget:
+                size_hint_y: None
+                height: "25dp"
+
+            MDTextFieldRound:
+                write_tab: False
+                focus: True
+                id: username
+                normal_color: 1, 1, 1, 0.5
+                icon_left_color: 0, 0, 0, 0.8
+                color_active: 1, 1, 1, 1
+                icon_left: "account"
+                hint_text: "Username"
+                font_size: 17
+                current_hint_text_color: 1, 1, 1, 1
+                on_text_validate: password.focus = True
+
+            Widget:
+                size_hint_y: None
+                height: "25dp"
+
+            MDTextFieldRound:
+                id: password
+                password: True
+                normal_color: 1, 1, 1, 0.5
+                icon_left_color: 0, 0, 0, 0.8
+                color_active: 1, 1, 1, 1
+                icon_left: "lock"
+                hint_text: "Password"
+                font_size: 17
+                current_hint_text_color: 1, 1, 1, 1
+                write_tab: False
+                on_text_validate:
+                    root.validate()
+
+            MDBoxLayout:
+                id: alert
+                orientation: "vertical"
+                canvas.before:
+                size_hint: (1, None)
+                height: 30
+                padding: 20
+
+                MDLabel:
+                    id: alert_text
+                    text: "Something has Error. Please Try Again in few minutes."
+                    size_hint_x: 1
+                    opacity: 0
+                    font_size: 14
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    color: rgba("#FA2A14")
+
+            MDFillRoundFlatIconButton:
+                id: btn_sign_in
+                icon: "account-arrow-right"
+                text: 'SIGN IN'
+                pos_hint: {"center_x": 0.5}
+                size_hint_x: 0.7
+                padding: 20
+                md_bg_color: rgba("#187bcd")
+                disabled: False
+                on_release:
+                    root.validate()
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            height: 400
+            width: 500
+            pos_hint: {"center_x": 0.7, "center_y": 0.5}
+            Image:
+                source: "images/bg5.png"
