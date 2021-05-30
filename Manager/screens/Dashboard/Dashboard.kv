@@ -1,0 +1,290 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+<DashboardScreen>:
+    MDBoxLayout:
+        size_hint: (1, 1)
+        orientation: 'horizontal'
+
+         # SIDEBAR RIGHT
+
+        MDBoxLayout:
+            id: sidebar
+            orientation: 'vertical'
+            size_hint: (None, 1)
+            width: 200
+            md_bg_color: get_color_from_hex('#2A2D3E')
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: (None, None)
+                width: 200
+                height: 200
+                padding: 50, 50, 50, 30
+                Image:
+                    size_hint: (None, None)
+                    width: 100
+                    height: 100
+                    source: 'images/logo.png'
+                Widget:
+                    size_hint: (1, None)
+                    height: 30
+                MDLabel:
+                    text: 'NYSCO'
+                    halign: 'center'
+                    font_style: 'H5'
+                    theme_text_color: "Custom"
+                    text_color: get_color_from_hex('#2196F3')
+                    bold: True
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding_x: 10
+                size_hint: (1, 1)
+
+                ScrollView:
+                    size_hint_y: 1
+                    MDList:
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                md_bg_color: get_color_from_hex('#212332')
+                                MDIconButton:
+                                    icon: "monitor-dashboard"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Dashboard'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "cart"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Products'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "book-open-page-variant"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Inventory'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "clipboard-text-outline"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Billing'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "dresser-outline"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Stores'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "account-group"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Employees'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                        OneLineIconListItem:
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                size_hint: (1, 1)
+                                MDIconButton:
+                                    icon: "script-text-outline"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                                Widget:
+                                    size_hint: (None, None)
+                                    width: 15
+                                MDLabel:
+                                    text: 'Reports'
+                                    halign: "left"
+                                    theme_text_color: "Custom"
+                                    text_color: get_color_from_hex('#898A93')
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: (1, None)
+                    height: 50
+                    padding: 5
+                    MDIconButton:
+                        icon: 'settings'
+                        theme_text_color: "Custom"
+                        text_color: get_color_from_hex('#898A93')
+                    Widget:
+                        size_hint:(1, None)
+                    MDIconButton:
+                        icon: 'location-exit'
+                        theme_text_color: "Custom"
+                        text_color: get_color_from_hex('#898A93')
+                    Widget:
+                        size_hint:(1, None)
+                    MDIconButton:
+                        icon: 'information-outline'
+                        theme_text_color: "Custom"
+                        text_color: get_color_from_hex('#898A93')
+
+        # CONTENT RIGHT
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint: (1, 1)
+            md_bg_color: get_color_from_hex('#212332')
+
+            # TOP BAR
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint: (1, None)
+                height: 70
+                md_bg_color: get_color_from_hex('#212332')
+                padding: 10
+                MDIconButton:
+                    icon: 'menu'
+                    user_font_size: "30sp"
+                    theme_text_color: "Custom"
+                    text_color: get_color_from_hex('#898A93')
+                    on_release: root.collapse_sidebar()
+                Widget:
+                    size_hint: (None, 1)
+                    width: 20
+                MDLabel:
+                    text: 'Dashboard'
+                    halign: 'left'
+                    font_style: 'H6'
+                    theme_text_color: "Custom"
+                    text_color: get_color_from_hex('#EBEBED')
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: (None, None)
+                    width: 200
+                    height: 50
+                    padding: 5
+                    md_bg_color: get_color_from_hex('#2A2D3E')
+                    canvas.after:
+                        Color:
+                            rgba: get_color_from_hex('#898A93')
+                        Line:
+                            width: .5
+                            rounded_rectangle: (self.x, self.y, self.width, self.height, 5)
+#                        RoundedRectangle:
+#                            pos: self.pos
+#                            size: self.size
+#                            radius: [20]
+
+                    MDBoxLayout:
+                        size_hint: (None, None)
+                        height: 40
+                        width: 40
+                        md_bg_color: get_color_from_hex('#256985')
+                        FitImage:
+                            source: 'images/default.png'
+
+                    MDLabel:
+                        text: 'Naveen Perera'
+                        halign: 'center'
+                        theme_text_color: "Custom"
+                        text_color: get_color_from_hex('#EBEBED')
+
+
+
+            # MAIN CONTENT
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: (1, 1)
+                md_bg_color: get_color_from_hex('#212332')
+
+                # CARD SET
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: (1, None)
+                    ScrollView:
+
+                    MDGridLayout:
+                        rows: 1
+                        spacing: 50
+                        size_hint: (None, 1)
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "280dp", "180dp"
+                        pos_hint: {"center_x": .5, "top": 0.95}
+                        border_radius: 20
+                        radius: [15]
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+
+
+
+
